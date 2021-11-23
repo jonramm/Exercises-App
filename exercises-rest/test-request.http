@@ -1,0 +1,94 @@
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Curls",
+    "reps": 20,
+    "weight": "20",
+    "unit": "3",
+    "date": "11/21/21"
+}
+
+###
+
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Push-ups",
+    "reps": 50,
+    "weight": "135",
+    "unit": "4",
+    "date": "11/21/21"
+}
+
+###
+
+PUT http://localhost:3000/exercises/619abb8ca62795c83322259e HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Curls",
+    "reps": 25,
+    "weight": "20",
+    "unit": "5",
+    "date": "11/21/21"
+}
+
+###
+
+DELETE http://localhost:3000/exercises/619abb8ca62795c83322259e HTTP/1.1
+
+###
+
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Push Ups",
+    "reps": 50,
+    "weight": "140",
+    "unit": "5",
+    "date": "11/23/21"
+}
+
+###
+
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Squats",
+    "reps": 50,
+    "weight": "20",
+    "unit": "10",
+    "date": "11/23/21"
+}
+
+###
+
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Lunges",
+    "reps": 30,
+    "weight": "10",
+    "unit": "2",
+    "date": "11/23/21"
+}
+
+###
+
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Dips",
+    "reps": 40,
+    "weight": "0",
+    "unit": "5",
+    "date": "11/23/21"
+}
+
+###
