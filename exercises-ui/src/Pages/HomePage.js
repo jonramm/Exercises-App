@@ -39,22 +39,6 @@ function HomePage({setExerciseToEdit}) {
 
     const [exerciseGreeting, setGreeting] = useState(greetingArray[Math.floor(Math.random() * 4)])
 
-
-    // const loadGreeting = () => {
-    //     let greeting = "";
-    //     return () => {
-    //         const greetings = ["Gaze upon the glory of your commitment to health!",
-    //                            "Your accomplishments are an inspiration to all others!",
-    //                            "The New Year's resolution that actually worked!",
-    //                            "This legitimizes all that beer!"]
-    //         let i = Math.floor(Math.random() * 4)
-    //         greeting = greetings[i];
-    //         return greeting;
-    //     }
-    // }
-
-    // const greeting = loadGreeting()
-
     useEffect(() => {
         loadExercises();
     }, []);
@@ -65,20 +49,14 @@ function HomePage({setExerciseToEdit}) {
         }, 5000);
       },[])
 
-    // useEffect(() => {
-    //     loadGreeting();
-    // }, [])
-
-
     return (
         <div className="page">
             <div className="flex-container">
                 <h2 className="flex-item">YOUR EXERCISES</h2>
-                {/* <p>{greeting()}</p> */}
                 <p>{exerciseGreeting}</p>
-                <ExerciseList class="flex-item" exercises={exercises} onDelete={onDelete} onEdit={onEdit}></ExerciseList>
+                <ExerciseList className="flex-item" exercises={exercises} onDelete={onDelete} onEdit={onEdit}></ExerciseList>
                 <div className="displayed-items">
-                    <Link to="/create-exercise">CREATE EXERCISE</Link>
+                    <Link to="/create-exercise" className="react-link">CREATE EXERCISE</Link>
                 </div>
             </div>
         </div>

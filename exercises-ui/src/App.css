@@ -88,6 +88,10 @@ tr:nth-of-type(even) {
   width: fit-content;
 }
 
+.react-link {
+  font-weight: bold;
+}
+
 .nav-bar {
   display: flex;
   padding: 10px;
