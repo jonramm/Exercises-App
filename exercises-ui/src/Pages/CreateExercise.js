@@ -1,6 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
 function CreateExercise() {
@@ -31,37 +30,52 @@ function CreateExercise() {
     }
 
     return (
-        <>
-            <h1>Create Exercise</h1>
-            <input
-                type="text"
-                placeholder="Enter name"
-                value={name}
-                onChange={e => setName(e.target.value)} />
-            <input
-                type="number"
-                placeholder="Enter reps"
-                value={reps}
-                onChange={e => setReps(e.target.value)} />  
-            <input
-                type="number"
-                placeholder="Enter weight"
-                value={weight}
-                onChange={e => setWeight(e.target.value)} /> 
-            <input
-                type="number"
-                placeholder="Enter unit"
-                value={unit}
-                onChange={e => setUnit(e.target.value)} /> 
-            <input
-                type="text"
-                placeholder="Enter date"
-                value={date}
-                onChange={e => setDate(e.target.value)} />
-            <button
-                onClick={addExercise}
-            >Add</button>
-        </>
+        <div className="page">
+            <div className="flex-container">
+                <h2 className="flex-item">Create Exercise</h2>
+                <p>What have you conquered this time?</p>
+                <div className="displayed-items">
+                <div className="flex-item">
+                    <div class="flex-container input">
+                        <input className="flex-item"
+                            type="text"
+                            placeholder="exercise name"
+                            value={name}
+                            onChange={e => setName(e.target.value)} />
+                        <input className="flex-item"
+                            type="number"
+                            placeholder="reps"
+                            value={reps}
+                            onChange={e => setReps(e.target.value)} />  
+                        <input className="flex-item"
+                            type="number"
+                            placeholder="weight"
+                            value={weight}
+                            onChange={e => setWeight(e.target.value)} /> 
+                        <select className="flex-item"
+                            type="text"
+                            placeholder="unit"
+                            value={unit}
+                            onChange={e => setUnit(e.target.value)}>
+                                <option value="" disabled selected hidden>unit</option>
+                                <option value="lbs">lbs</option>
+                                <option value="kgs">kgs</option>  
+                        </select>
+                        <input className="flex-item"
+                            type="text"
+                            placeholder="date"
+                            value={date}
+                            onChange={e => setDate(e.target.value)} />
+                    </div>
+                    </div>
+                    <div className="flex-item">
+                        <button id="button"
+                            onClick={addExercise}
+                        >CREATE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     );
 }
 

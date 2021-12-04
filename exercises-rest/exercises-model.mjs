@@ -1,5 +1,6 @@
 
 import mongoose from 'mongoose';
+// import Exercise from '../exercises-ui/src/Components/Exercise';
 
 mongoose.connect(
     "mongodb://localhost:27017/exercises_db",

@@ -5,6 +5,7 @@ import HomePage from './Pages/HomePage';
 import CreateExercise from './Pages/CreateExercise';
 import EditExercise from './Pages/EditExercise';
 import { useState } from 'react';
+import NavBar from './Components/NavBar';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
   return (
     <div>
       <Router>
+        <NavBar />
         <div>
           <Route path="/" exact>
             <HomePage setExerciseToEdit={setExerciseToEdit} />

@@ -1,20 +1,11 @@
 import React from 'react';
 import Exercise from './Exercise';
+import TableHead from './TableHead';
 
 function ExerciseList({exercises, onDelete, onEdit}) {
     return(
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Reps</th>
-                    <th>Weight</th>
-                    <th>Unit</th>
-                    <th>Date</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
-                </tr>    
-            </thead>
+        <table className="displayed-items">
+            <TableHead />
             <tbody>
             {exercises.map((exercise, i) => <Exercise exercise={exercise}
                     onDelete={onDelete}

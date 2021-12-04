@@ -1,12 +1,9 @@
-POST http://localhost:3000/exercises HTTP/1.1
+POST http://localhost:3000/contacts HTTP/1.1
 content-type: application/json
 
 {
-    "name": "Curls",
-    "reps": 20,
-    "weight": "20",
-    "unit": "3",
-    "date": "11/21/21"
+    "name": "Jon Ramm",
+    "email": "jrgbone@gmail.com"
 }
 
 ###

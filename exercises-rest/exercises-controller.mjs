@@ -8,7 +8,8 @@ const app = express();
 app.use(express.json());
 
 app.post('/exercises', (req, res) => {
-    exercises.createExercise(req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
+    exercises.createExercise(req.body.name, req.body.reps, 
+        req.body.weight, req.body.unit, req.body.date)
         .then(exercise => {
             res.status(201).json(exercise);
         })
