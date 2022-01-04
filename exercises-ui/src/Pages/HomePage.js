@@ -34,10 +34,14 @@ function HomePage({setExerciseToEdit}) {
         "Gaze upon the glory of your commitment to health!",
         "Your accomplishments are an inspiration to all others!",
         "The New Year's resolution that actually worked!",
-        "This legitimizes all that beer!"
+        "This legitimizes all that beer!",
+        "Me and all the other robots are so proud of you!",
+        "How long do you think you can keep this up?",
+        "You're well on your way to a guilt free burger!",
+        "You're almost ready for beach season!"
     ]
 
-    const [exerciseGreeting, setGreeting] = useState(greetingArray[Math.floor(Math.random() * 4)])
+    const [exerciseGreeting, setGreeting] = useState(greetingArray[Math.floor(Math.random() * greetingArray.length)])
 
     useEffect(() => {
         loadExercises();
@@ -45,7 +49,7 @@ function HomePage({setExerciseToEdit}) {
 
     useEffect(() => {
         setInterval(() => {
-          setGreeting(greetingArray[Math.floor(Math.random() * 4)])
+          setGreeting(greetingArray[Math.floor(Math.random() * greetingArray.length)])
         }, 5000);
       },[])
 

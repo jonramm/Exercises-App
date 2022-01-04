@@ -15,7 +15,7 @@ app.post('/exercises', (req, res) => {
         })
         .catch(error => {
             console.error(error);
-            res.status(400).json({ Error: 'Request failed' });
+            res.status(500).json({ Error: 'Request failed' });
         });
 });
 
@@ -23,10 +23,11 @@ app.post('/exercises', (req, res) => {
 app.get('/exercises', (req, res) => {
     exercises.findExercises()
         .then(exercises => { 
-            res.json(exercises);
+            res.status(200).json(exercises);
          })
         .catch(error => {
-            res.status(400).json({ Error: 'Request failed' });
+            console.error(error);
+            res.status(500).json({ Error: 'Request failed' });
         });
 });
 
@@ -35,7 +36,7 @@ app.put('/exercises/:_id', (req, res) => {
         req.body.weight, req.body.unit, req.body.date)
         .then(numUpdated => {
             if (numUpdated === 1) {
-                res.json({ _id: req.params._id, name: req.body.name, reps: req.body.reps, 
+                res.status(200).json({ _id: req.params._id, name: req.body.name, reps: req.body.reps, 
                     weight: req.body.weight, unit: req.body.unit, date: req.body.date })
             } else {
                 res.status(404).json({ Error: 'Resource not found' });
@@ -43,7 +44,7 @@ app.put('/exercises/:_id', (req, res) => {
         })
         .catch(error => {
             console.error(error);
-            res.status(400).json({ Error: 'Request failed' });
+            res.status(500).json({ Error: 'Request failed' });
         });
 });
 

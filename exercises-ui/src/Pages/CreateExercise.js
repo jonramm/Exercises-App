@@ -36,7 +36,7 @@ function CreateExercise() {
                 <p>What have you conquered this time?</p>
                 <div className="displayed-items">
                 <div className="flex-item">
-                    <div class="flex-container input">
+                    <div className="flex-container input">
                         <input className="flex-item"
                             type="text"
                             placeholder="exercise name"
